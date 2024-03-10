@@ -55,69 +55,72 @@
 								</button>
 							</div>
 						</div>
-
-						<div class="card-body">
-							<table id="example2" class="table table-bordered table-hover">
-								<thead>
-									<tr>
-										<th>No</th>
-										<th>Date</th>
-										<th>Start Time</th>
-										<th>Category</th>
-										<th>Task Detail</th>
-										<th>Status</th>
-										<th>Finish Time</th>
-										<th>Duration</th>
-										<th>PIC</th>
-										<th>Remark</th>
-									</tr>
-								</thead>
-								<tbody>
-									<?php
+						<div class="box">
+							<div class="card-body">
+								<a href="<?= base_url('laporan/download_excel') ?>" class="btn btn-primary">Download Excel</a>
+								<a href="<?= base_url('laporan/download_excel') ?>" class="btn btn-primary">Activity Sub-Section</a>
+								<hr>
+								<table id="example1" class="table table-bordered table-striped">
+									<thead>
+										<tr>
+											<th>No</th>
+											<th>Date</th>
+											<th>Start Time</th>
+											<th>Category</th>
+											<th>Task Detail</th>
+											<th>Status</th>
+											<th>Finish Time</th>
+											<th>Duration</th>
+											<th>PIC</th>
+											<th>Remark</th>
+										</tr>
+									</thead>
+									<tbody>
+										<?php
                         $nomor = 1;
                         foreach ($data as $x) { ?>
-									<tr>
-										<td><?= $nomor++; ?></td>
-										<td><?= $x->tanggal; ?></td>
-										<td><?= $x->s_time; ?></td>
-										<td><?= $x->category; ?></td>
-										<td><?= $x->detail; ?></td>
-										<td><?= $x->status; ?></td>
-										<td><?= $x->f_time; ?></td>
-										<td><?= $x->durasi; ?></td>
-										<td><?= $x->pic; ?></td>
-										<td><?= $x->remark; ?></td>
-									</tr>
-                                    <?php   } ?>
-                                    <tfoot>
-                                        <tr>
-                                            <th>No</th>
-                                            <th>Date</th>
-                                            <th>Start Time</th>
-                                            <th>Category</th>
-                                            <th>Task Detail</th>
-                                            <th>Status</th>
-                                            <th>Finish Time</th>
-                                            <th>Duration</th>
-                                            <th>PIC</th>
-                                            <th>Remark</th>
-                                        </tr>
-                                    </tfoot>
-								</tbody>
-							</table>
-				</div>
+										<tr>
+											<td><?= $nomor++; ?></td>
+											<td><?= $x->tanggal; ?></td>
+											<td><?= $x->s_time; ?></td>
+											<td><?= $x->category; ?></td>
+											<td><?= $x->detail; ?></td>
+											<td><?= $x->status; ?></td>
+											<td><?= $x->f_time; ?></td>
+											<td><?= $x->durasi; ?></td>
+											<td><?= $x->pic; ?></td>
+											<td><?= $x->remark; ?></td>
+										</tr>
+										<?php   } ?>
+									<tfoot>
+										<tr>
+											<th>No</th>
+											<th>Date</th>
+											<th>Start Time</th>
+											<th>Category</th>
+											<th>Task Detail</th>
+											<th>Status</th>
+											<th>Finish Time</th>
+											<th>Duration</th>
+											<th>PIC</th>
+											<th>Remark</th>
+										</tr>
+									</tfoot>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!-- /.Left col -->
+						<!-- right col (We are only adding the ID to make the widgets sortable)-->
+						<section class="col-lg-5 connectedSortable">
+							<!-- solid sales graph -->
+							<!-- /.card -->
+						</section>
+						<!-- right col -->
+					</div>
+					<!-- /.row (main row) -->
+				</div><!-- /.container-fluid -->
+			</section>
+			<!-- /.content -->
 		</div>
-		<!-- /.Left col -->
-		<!-- right col (We are only adding the ID to make the widgets sortable)-->
-		<section class="col-lg-5 connectedSortable">
-			<!-- solid sales graph -->
-			<!-- /.card -->
-		</section>
-		<!-- right col -->
-	</div>
-	<!-- /.row (main row) -->
-	</div><!-- /.container-fluid -->
-	</section>
-	<!-- /.content -->
-	</div>
-	<!-- /.content-wrapper -->
+		<!-- /.content-wrapper -->

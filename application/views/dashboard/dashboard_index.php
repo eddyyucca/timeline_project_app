@@ -1,6 +1,5 @@
 <body class="hold-transition sidebar-mini layout-fixed">
 	<div class="wrapper">
-
 		<!-- Preloader -->
 		<div class="preloader flex-column justify-content-center align-items-center">
 			<img class="animation__shake" src="<?= base_url('assets/') ?>dist/img/AdminLTELogo.png" alt="AdminLTELogo"
@@ -128,9 +127,9 @@
 											<label>PIC</label>
 											<select class="form-control select2" name="pic" style="width: 100%;">
 												<option selected="selected">--Pilih Status--</option>
-												<option value="Julak">Julak</option>
-												<option value="Wahyu">Wahyu</option>
-												<option value="Reymont">Reymont</option>
+												<?php foreach ($karyawan as $kar) { ?>
+                                        <option value="<?= $kar->nama ?>"><?= $kar->nama ?> | <?= $kar->nik ?></option>
+                                        <?php } ?>
 											</select>
 										</div>
 

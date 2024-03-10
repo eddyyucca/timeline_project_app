@@ -2,10 +2,19 @@
 
 class Dashboard extends CI_Controller {
 
+ public function __construct()
+    {
+        parent::__construct();
+        $this->load->library('form_validation');
+        $this->load->model('laporan_m');
+        $this->load->model('karyawan_m');
+
+    }
 	public function index() {
+		$data['karyawan'] = $this->karyawan_m->karyawan();
 		$this->load->view('template/header');
 		$this->load->view('template/sidebar');
-		$this->load->view('dashboard/dashboard_index');
+		$this->load->view('dashboard/dashboard_index', $data);
 		$this->load->view('template/footer');
 	}
 

@@ -18,4 +18,10 @@ class Laporan extends CI_Controller {
 		$this->load->view('dashboard/laporan', $data);
 		$this->load->view('template/footer');
 	}
+	public function download_excel()
+	{
+		$data['data'] = $this->laporan_m->laporan();
+		$this->load->view('dashboard/download_excel', $data);
+	
+	}
 }
